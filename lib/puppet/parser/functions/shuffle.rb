@@ -31,7 +31,7 @@ module Puppet::Parser::Functions
 
     elements = result.size
 
-    # Simple implementation of Fisher–Yates in-place shuffle ...
+    # Simple implementation of Fisher-Yates in-place shuffle ...
     elements.times do |i|
       j = rand(elements - i) + i
       result[j], result[i] = result[i], result[j]

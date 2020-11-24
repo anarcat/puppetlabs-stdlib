@@ -66,7 +66,7 @@ class Facter::Util::DotD
       retry if require 'rubygems'
       raise
     end
-    # Call ::JSON to ensure it references the JSON library from Ruby’s standard library
+    # Call ::JSON to ensure it references the JSON library from Ruby's standard library
     # instead of a random JSON namespace that might be in scope due to user code.
     ::JSON.parse(File.read(file)).each_pair do |f, v|
       Facter.add(f) do
